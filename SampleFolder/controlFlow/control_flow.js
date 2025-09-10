@@ -48,3 +48,20 @@ console.log("User Category: ",userCategory);
 let isAuthenticated=true;
 let authenticatedStatus=isAuthenticated?"Authenticated":"Not Authenticated";
 console.log("Authentication: ",authenticatedStatus);
+let role="employee";
+ let authorizationMessage;
+switch(role){
+    case "employee":
+    authorizationMessage="authorized access to Dietary Services";
+    break;
+    case "enrolled member":
+        authorizationMessage="authorized to have access to Dietary Services and one-on-one interaction with a dietician.";
+        break;
+        case "subscriber":
+            authorizationMessage="authorized to have partial access to facilitate Dietary Services only.";
+            break;
+            default:
+                authorizationMessage="not authorized to access Dietary Services.";
+
+}
+console.log("Dietary Service: ",authorizationMessage);
