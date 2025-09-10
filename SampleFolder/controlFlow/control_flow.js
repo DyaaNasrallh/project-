@@ -34,14 +34,17 @@ let userCategory;
 switch(userType){
     case "admin":
         userCategory="Administrator";
-        breack;
+        break;
     case "manager":
         userCategory="Manager";
-        breack;
+        break;
         case "guest":
             userCategory="Gest User";
-            breack;
+        break;
             default:
                 userCategory="Unkown user";
 }
 console.log("User Category: ",userCategory);
+let isAuthenticated=true;
+let authenticatedStatus=isAuthenticated?"Authenticated":"Not Authenticated";
+console.log("Authentication: ",authenticatedStatus);
