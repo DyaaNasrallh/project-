@@ -1,0 +1,10 @@
+let length;
+let width;
+function calculateArea() {
+    length=parseFloat(document.getElementById("length").value);
+    width=parseFloat(document.getElementById("width").value);
+    let are= length * width;
+    document.getElementById('result').innerText = "Area: " + are;
+}
+
+            
