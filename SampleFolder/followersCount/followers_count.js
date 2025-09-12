@@ -14,3 +14,8 @@ function checkCountValue(){
         alert("Amazing! You have reached 20 followers.");
     }
 }
+function resetCount(){
+    count=0;
+    alert("Followers count has been reset.");
+    displayCount();
+}
