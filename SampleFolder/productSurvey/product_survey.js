@@ -6,6 +6,7 @@ const username = document.getElementById('name');
     const productType = document.getElementById('productType');
     const feedback = document.getElementById('feedbackText');
     const subnitButton=document.getElementById('submitBtn');
+    const experince=document.getElementById('experince');
 function submitFeedback() {
     if(document.getElementById('name').value=="" || document.getElementById('age').value=="" || document.getElementById('email').value=="" || document.getElementById('job').value=="" || document.getElementById('designation').value=="" || document.getElementById('productType').value=="" || document.getElementById('feedbackText').value==""){
         alert("Please fill all the fields");
@@ -19,6 +20,7 @@ function submitFeedback() {
     document.getElementById('userDesignation').innerHTML = designation.value;
     document.getElementById('userProductChoice').innerHTML = productType.value;
     document.getElementById('userFeedback').innerHTML = feedback.value;
+    document.getElementById('userExperince').innerHTML = experince.value;
     document.getElementById('userInfo').style.display = 'block';
 }}
     subnitButton.onclick=submitFeedback;
