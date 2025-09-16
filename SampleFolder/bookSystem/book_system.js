@@ -27,16 +27,17 @@ const book=books.map((item,index)=>
     <p><strong>Author Name:</strong> ${item.author}</p>
     <p><strong>Book Description:</strong> ${item.description}</p>
     <p><strong>No. of Pages:</strong> ${item.pageNimber} page(s)</p>
-    <button onclick="edit(${index})">Edit</button>`
+    <button onclick="edit(${index})">Edit</button>
+    <button onclick="deleteBook(${index})">Delete</button>`
 );
 document.getElementById('books').innerHTML=book.join(' ');
 }
 function edit(index){
 const book=books[index];
-const bookname=document.getElementById('bookName').value=book.name;
-const authorName=document.getElementById('authorName').value=book.author;
-const bookDescription=document.getElementById('bookDescription').value=book.description;
-const pagesNumber=document.getElementById('pagesNumber').value=book.pageNimber;
+document.getElementById('bookName').value=book.name;
+document.getElementById('authorName').value=book.author;
+document.getElementById('bookDescription').value=book.description;
+document.getElementById('pagesNumber').value=book.pageNimber;
 books.splice(index,1);
 showBookDetails();
 }
@@ -45,4 +46,9 @@ function clearInputs() {
             document.getElementById('authorName').value = '';
             document.getElementById('bookDescription').value = '';
             document.getElementById('pagesNumber').value = '';
+ }
+ function deleteBook(index){
+
+books.splice(index,1);
+showBookDetails();
  }
